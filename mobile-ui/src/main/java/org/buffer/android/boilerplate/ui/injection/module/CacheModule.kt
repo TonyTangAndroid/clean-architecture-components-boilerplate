@@ -8,6 +8,7 @@ import dagger.Provides
 import org.buffer.android.boilerplate.cache.BufferooCacheImpl
 import org.buffer.android.boilerplate.cache.db.BufferoosDatabase
 import org.buffer.android.boilerplate.data.repository.BufferooCache
+import javax.inject.Singleton
 
 /**
  * Module that provides all dependencies from the cache package/layer.
@@ -32,6 +33,7 @@ abstract class CacheModule {
         }
     }
 
+    @Singleton
     @Binds
     abstract fun bindBufferooCache(bufferooCacheImpl: BufferooCacheImpl): BufferooCache
 }
